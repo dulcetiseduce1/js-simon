@@ -3,6 +3,7 @@
 nome repo: js-simon
 
 Descrizione:
+
 - Visualizzare in pagina (html) 5 numeri casuali.
 - Avviare un timer di 30 secondi
 - Dopo 30 secondi, nascondere i numeri.
@@ -12,9 +13,10 @@ Descrizione:
 ---
 
 Consigli del giorno:
-* Pensate prima in italiano.
-* Dividete in piccoli problemi la consegna.
-* Individuate gli elementi di cui avete bisogno per realizzare il programma.
-* Pensate prima in italiano.
-* Dividete in piccoli problemi la consegna.
-* Individuate gli elementi di cui avete bisogno per realizzare il programma.
+
+- Pensate prima in italiano.
+- Dividete in piccoli problemi la consegna.
+- Individuate gli elementi di cui avete bisogno per realizzare il programma.
+- Pensate prima in italiano.
+- Dividete in piccoli problemi la consegna.
+- Individuate gli elementi di cui avete bisogno per realizzare il programma.
