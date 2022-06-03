@@ -1,9 +1,8 @@
-//visualizzare 5 numeri in html
-//stabii
+//const HTML
 const numeroHTML = document.getElementById("numberList");
-function randomNumbers() {
+//numero random
 let numeriArray = [];
-
+function randomNumbers(numeriArray) {
   for (let i = 0; i < 5; i++) {
     let numeroRandom = Math.floor(Math.random() * 9 + 1);
     numeroHTML.innerHTML += `${numeroRandom}`;
@@ -11,28 +10,55 @@ let numeriArray = [];
   }
   return numeriArray;
 }
-
-//log numeri
-let numerilog = randomNumbers();
-console.log(numerilog);
+numeriArray = randomNumbers(numeriArray);
+console.log(numeriArray);
 
 //avviare un timer di 30 secondi
-setTimeout(timer, 3000);
-
-function timer() {
+function timeout() {
   numberList.classList.add("d-none");
+  // inserimento
+  function inserisciNumeri() {
+    let numeriUtente = [];
+    for (i = 0; i < 5; i++) {
+      let answer = prompt("Inserisci i numeri uno alla volta.");
+      let promptNumber = parseInt(answer);
+      numeriUtente.push(promptNumber);
+    }
+    return numeriUtente;
+  }
+
+  let numeriUtente = inserisciNumeri();
+  console.log(numeriUtente);
+  // controllo
+  function controllo(numeriArray, numeriUtente) {
+    let numeriIndovinati = [];
+    for (i = 0; i < 5; i++) {
+      if (numeriArray.includes(numeriUtente[i])) {
+        numeriIndovinati.push(numeriUtente[i]);
+      }
+    }
+    return numeriIndovinati;
+  }
+  numeriIndovinati = controllo(numeriArray, numeriUtente);
+  console.log(numeriIndovinati);
+
+  function result(numeriIndovinati) {
+    alert(
+      "Hai ricordato " +
+        numeriIndovinati.length +
+        "numeri e sono i seguenti: " +
+        numeriIndovinati
+    );
+  }
+  result(numeriIndovinati);
 }
 
-//dopo 30 secondi nascondere i numerifunction
-setTimeout(inserisciNumeri, 3500);
-function inserisciNumeri(){
-let numeriUtente = [];
-while (numeriUtente.length < 5) {
-  let prompt = prompt("Inserisci i numeri uno alla volta.");
-  let promptNumber = parseInt(prompt);
-  numeriUtente.push(promptNumber);
-}
-console.log(numeriUtente);
-}
+
+setTimeout(timeout, 5000);
+
+//inserisci numeri
+
+//numeri indovinati
+
 //prompt utente inserisci numeri
 //5 numeri inseriti dice quali giusti
